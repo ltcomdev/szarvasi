@@ -1,0 +1,23 @@
+# Adobe files
+*.xd
+*.psd
+*.psdt
+*.ai
+
+# Documents
+*.pdf
+
+# Large asset folders (not needed for web)
+assets/
+gyujtes webre/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
