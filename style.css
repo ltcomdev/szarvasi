@@ -304,6 +304,7 @@ a {
     height: 65%;
     object-fit: contain;
     z-index: 0;
+    border-radius: 15px;
 }
 
 .product-content {
