@@ -41,7 +41,7 @@ a {
 }
 
 .header-top-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 40px 0 20px;
     display: flex;
@@ -52,7 +52,7 @@ a {
 
 .logo {
     position: absolute;
-    left: calc(50% - 500px + 10px);
+    left: calc(50% - 550px + 10px);
     top: 8px;
     z-index: 100;
 }
@@ -155,7 +155,7 @@ a {
 }
 
 .hero-carousel {
-    max-width: 1133px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0;
 }
@@ -248,7 +248,7 @@ a {
 }
 
 .products-carousel {
-    max-width: 1020px;
+    max-width: 1100px;
     margin: 0 auto;
     position: relative;
     padding: 0 60px;
@@ -364,7 +364,7 @@ a {
 }
 
 .recipes-hero {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto 45px;
 }
 
@@ -375,9 +375,9 @@ a {
 
 .recipes-wrapper {
     position: relative;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 60px;
 }
 
 .recipes-prev,
@@ -397,7 +397,7 @@ a {
 }
 
 .recipes-carousel {
-    max-width: 900px;
+    max-width: 980px;
     margin: 0 auto;
 }
 
