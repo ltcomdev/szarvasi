@@ -381,8 +381,8 @@ a {
 }
 
 .recipes-hero {
-    max-width: 1080px;
-    margin: 0 auto 54px;
+    max-width: 1000px;
+    margin: 0 auto 45px;
 }
 
 .recipes-hero img {
@@ -392,9 +392,9 @@ a {
 
 .recipes-wrapper {
     position: relative;
-    max-width: 1080px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 54px;
+    padding: 0 50px;
 }
 
 .recipes-prev,
@@ -414,7 +414,7 @@ a {
 }
 
 .recipes-carousel {
-    max-width: 990px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
