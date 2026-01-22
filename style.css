@@ -285,21 +285,20 @@ a {
 .product-item {
     display: block;
     text-align: center;
-    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-item:hover {
     transform: translateY(-8px);
-    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.15));
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.product-item img {
+.product-img {
     width: 100%;
     height: auto;
-}
-
-.product-info {
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .product-name {
