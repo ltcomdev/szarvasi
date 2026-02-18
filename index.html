@@ -7,185 +7,146 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="site-header" id="top">
+  <div class="page">
+    <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top">
-          <img src="assets/images/logo.webp" alt="Szarvasi Mozzarella logó">
-          <span>Szarvasi Mozzarella</span>
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.webp" alt="Szarvasi Mozzarella">
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menü</button>
 
         <nav id="site-nav" class="site-nav">
-          <a href="#top">Főoldal</a>
-          <a href="#termekek">Termékek</a>
-          <a href="#receptek">Receptjeink</a>
-          <a href="#rolunk">Rólunk</a>
-          <a href="#media">Média</a>
+          <a class="active" href="index.html">Főoldal</a>
+          <a href="termekek.html">Termékek</a>
+          <a href="rolunk.html">Rólunk</a>
+          <a href="receptjeink.html">Receptjeink</a>
+          <a href="media.html">Partnereink</a>
           <a href="#kapcsolat">Kapcsolat</a>
         </nav>
+
+        <div class="top-tools">
+          <div class="search-pill">⌕</div>
+          <div class="lang"><span class="active">HU</span> | EN</div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero" aria-label="Kiemelt nyitó szekció">
-        <div class="container hero-grid">
+      <section class="home-hero">
+        <div class="container home-hero-grid">
           <div class="hero-copy">
-            <p class="hero-kicker">Szarvasi mozzarella</p>
-            <h1>LOREM IPSUM DOLOR SIT</h1>
+            <h1>LOREM IPSUM<br>DOLOR SIT</h1>
             <p>
-              Cégünk 25 éve foglalkozik szívvel-lélekkel a mozzarellával.
-              A tradicionális értékek és a modern technológia találkozásával
-              készítjük termékeinket.
+              Cégünk 25 éve foglalkozik szívvel lélekkel a mozzarellával.
+              A legjobb minőséget a tradicionális értékek és a modern technológia
+              ötvözésével érjük el.
             </p>
-            <a class="btn" href="#termekek">Termékeink</a>
           </div>
-
-          <div class="hero-visual">
-            <img class="hero-main" src="assets/images/hero.webp" alt="Kiemelt Szarvasi termékek">
+          <div class="hero-photo">
+            <img class="hero-main" src="assets/images/hero.webp" alt="Kiemelt termékek">
             <img class="hero-garnish" src="assets/images/hero-garnish.webp" alt="">
           </div>
         </div>
-      </section>
 
-      <section class="category-strip" aria-label="Termékkategóriák gyorsmenü">
-        <div class="container">
+        <div class="container icon-strip">
           <ul>
             <li><img src="assets/images/icon-1.webp" alt=""><span>mozzarella</span></li>
-            <li><img src="assets/images/icon-2.webp" alt=""><span>pizza mozzarella</span></li>
-            <li><img src="assets/images/icon-3.webp" alt=""><span>szeletelt</span></li>
+            <li><img src="assets/images/icon-2.webp" alt=""><span>szelet mozzarella</span></li>
+            <li><img src="assets/images/icon-3.webp" alt=""><span>pizza mozzarella</span></li>
             <li><img src="assets/images/icon-4.webp" alt=""><span>snack</span></li>
-            <li><img src="assets/images/icon-5.webp" alt=""><span>mascarpone</span></li>
-            <li><img src="assets/images/icon-6.webp" alt=""><span>ricotta</span></li>
-            <li><img src="assets/images/icon-7.webp" alt=""><span>grill</span></li>
+            <li><img src="assets/images/icon-5.webp" alt=""><span>mozzafit</span></li>
+            <li><img src="assets/images/icon-6.webp" alt=""><span>mascarpone</span></li>
+            <li><img src="assets/images/icon-7.webp" alt=""><span>ricotta</span></li>
             <li><img src="assets/images/icon-8.webp" alt=""><span>high protein</span></li>
           </ul>
         </div>
       </section>
 
-      <section class="section products" id="termekek">
-        <div class="container">
-          <header class="section-head">
-            <h2>Kiemelt termékeink</h2>
-            <p>Termékkategóriák: mozzarella, pizza mozzarella, ricotta, high protein</p>
-          </header>
-
-          <div class="cards four">
-            <article class="card product-card">
-              <img src="assets/images/product-mozzarella-100g.webp" alt="Szarvasi mozzarella 100g">
-              <h3>Szarvasi mozzarella 100g</h3>
-              <a href="#kapcsolat">Részletek</a>
-            </article>
-
-            <article class="card product-card">
-              <img src="assets/images/product-mozzarella-lactosefree-100g.webp" alt="Szarvasi mozzarella laktózmentes 100g">
-              <h3>Laktózmentes mozzarella 100g</h3>
-              <a href="#kapcsolat">Részletek</a>
-            </article>
-
-            <article class="card product-card">
-              <img src="assets/images/product-mozzarella-light-100g.webp" alt="Szarvasi mozzarella light 100g">
-              <h3>Mozzarella light 100g</h3>
-              <a href="#kapcsolat">Részletek</a>
-            </article>
-
-            <article class="card product-card">
-              <img src="assets/images/product-high-protein-ricotta.webp" alt="High Protein Ricotta">
-              <h3>High Protein Ricotta</h3>
-              <a href="#kapcsolat">Részletek</a>
-            </article>
-          </div>
+      <section class="products-highlight">
+        <div class="carousel-arrow left">‹</div>
+        <div class="carousel-arrow right">›</div>
+        <div class="container cards-row">
+          <article class="product-mini">
+            <img src="assets/images/product-mozzarella-light-100g.webp" alt="Szarvasi mozzarella light">
+            <p>Szarvasi mozzarella light<br><strong>100g</strong></p>
+          </article>
+          <article class="product-mini">
+            <img src="assets/images/product-mozzarella-100g.webp" alt="Szarvasi mozzarella">
+            <p>Szarvasi mozzarella<br><strong>100g</strong></p>
+          </article>
+          <article class="product-mini">
+            <img src="assets/images/product-mozzarella-lactosefree-100g.webp" alt="Szarvasi mozzarella laktózmentes">
+            <p>Szarvasi mozzarella laktózmentes<br><strong>100g</strong></p>
+          </article>
+          <article class="product-mini">
+            <img src="assets/images/cat-mozzarella.webp" alt="Mozzarella Itália">
+            <p>Mozzarella Itália<br><strong>100g</strong></p>
+          </article>
         </div>
       </section>
 
-      <section class="section recipes" id="receptek">
-        <div class="container recipes-layout">
-          <div class="featured-recipe">
+      <section class="container">
+        <div class="recipe-wave">
+          <div class="recipe-wave-grid">
             <h2>RECEPTEK</h2>
-            <img src="assets/images/recipe-francia-lecso.webp" alt="Francia lecsó mediterrán fűszeres grill mozzarellával">
-            <a class="btn ghost" href="#media">További receptek</a>
+            <img src="assets/images/recipe-francia-lecso.webp" alt="Friss pizza recept">
           </div>
+        </div>
 
-          <div class="cards three">
-            <article class="card recipe-card">
-              <img src="assets/images/recipe-francia-lecso.webp" alt="Francia lecsó mediterrán fűszeres grill mozzarellával">
-              <p class="meta">60 PERC</p>
+        <div class="recipe-grid">
+          <article class="recipe-card">
+            <img src="assets/images/recipe-francia-lecso.webp" alt="Francia lecsó">
+            <div class="copy">
               <h3>Francia lecsó mediterrán fűszeres grill mozzarellával</h3>
-            </article>
-            <article class="card recipe-card">
-              <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="Pulykamell tekercsek spenóttal és ricottával töltve">
-              <p class="meta">60-90 PERC</p>
-              <h3>Pulykamell tekercsek spenóttal és ricottával töltve</h3>
-            </article>
-            <article class="card recipe-card">
-              <img src="assets/images/recipe-chili-con-carne.webp" alt="Chili con carne chilis grill mozzarellával">
-              <p class="meta">30 PERC</p>
+              <strong>30 PERC</strong>
+            </div>
+          </article>
+          <article class="recipe-card">
+            <img src="assets/images/recipe-chili-con-carne.webp" alt="Chili con carne">
+            <div class="copy">
               <h3>Chili con carne chilis grill mozzarellával</h3>
-            </article>
-          </div>
+              <strong>60 PERC</strong>
+            </div>
+          </article>
+          <article class="recipe-card">
+            <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="Pulykamell tekercs">
+            <div class="copy">
+              <h3>Pulykamell tekercsek spenóttal és ricottával töltve</h3>
+              <strong>60-90 PERC</strong>
+            </div>
+          </article>
         </div>
-      </section>
 
-      <section class="section about" id="rolunk">
-        <div class="container about-layout">
-          <div class="quote">
-            <p>
-              "Több, mint 25 éve foglalkozunk szívvel-lélekkel a mozzarellával,
-              elkötelezett hívei vagyunk az olasz gasztronómia hazai népszerűsítésének."
-            </p>
-          </div>
-          <img src="assets/images/about.webp" alt="Szarvasi Mozzarella üzem és termékek">
-          <div class="about-copy">
-            <h2>Cégünkről</h2>
-            <p>
-              Pontosan tudjuk, hogy a legjobb minőséget csak a tradicionális értékek
-              és a modern technológia ötvözésével érhetjük el. Európai színvonalú üzemünkben
-              első osztályú, hazai tej felhasználásával készülnek termékeink.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section media" id="media">
-        <div class="container">
-          <header class="section-head">
-            <h2>Média megjelenések</h2>
-            <p>Partnereink és recept galéria</p>
-          </header>
-          <div class="media-grid">
-            <img src="assets/images/recipe-francia-lecso.webp" alt="">
-            <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="">
-            <img src="assets/images/recipe-chili-con-carne.webp" alt="">
-            <img src="assets/images/recipe-francia-lecso.webp" alt="">
-            <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="">
-            <img src="assets/images/recipe-chili-con-carne.webp" alt="">
-            <img src="assets/images/recipe-francia-lecso.webp" alt="">
-            <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="">
-            <img src="assets/images/recipe-chili-con-carne.webp" alt="">
-            <img src="assets/images/recipe-francia-lecso.webp" alt="">
-            <img src="assets/images/recipe-pulykamell-ricotta.webp" alt="">
-            <img src="assets/images/recipe-chili-con-carne.webp" alt="">
-          </div>
+        <div class="center-cta">
+          <a class="btn" href="receptjeink.html">TOVÁBBI RECEPTEK</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer" id="kapcsolat">
-      <div class="container footer-grid">
-        <section>
-          <h2>Elérhetőségeink</h2>
-          <p>2040, Budaörs, Gyár u. 2.</p>
-          <p>+36 20 772 3762</p>
-          <p>info@szarvasimozzarella.hu</p>
-        </section>
-        <section>
-          <h2>Linkek</h2>
-          <p>Rólunk | Adatvédelem | Média | ÁSZF</p>
-          <p>Bemutatkozó | Blog | Hírlevél | Állásajánlatok</p>
-        </section>
+      <div class="footer-wave"></div>
+      <div class="container footer-content">
+        <div class="footer-columns">
+          <div>
+            <h4>Elérhetőségeink:</h4>
+            <p>2040, Budaörs, Gyár u. 2.</p>
+            <p>+36 20 772 3762</p>
+            <p>info@szarvasimozzarella.hu</p>
+          </div>
+          <div class="social">
+            <h4>Kövess minket!</h4>
+            <div class="social-icons">
+              <span>f</span>
+              <span>ig</span>
+            </div>
+          </div>
+        </div>
+        <div class="legal">
+          Rólunk | Adatvédelem | Média | ÁSZF | Bemutatkozó | Blog | Hírlevél | Energetikai jelentés | Állásajánlatok
+          <small>Minden jog fenntartva © 2025</small>
+        </div>
       </div>
-      <p class="copyright">Minden jog fenntartva © 2025</p>
     </footer>
   </div>
 
