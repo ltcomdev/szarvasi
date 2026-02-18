@@ -1,57 +1,18 @@
-// Szarvasi Mozzarella - Main JavaScript
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll(".site-nav a");
 
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initHeaderScroll();
-    initSmoothScroll();
-});
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+    nav.classList.toggle("open");
+  });
 
-function initMobileMenu() {
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const mainNav = document.querySelector('.main-nav');
-    
-    if (!menuBtn || !mainNav) return;
-    
-    menuBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mainNav.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuToggle.setAttribute("aria-expanded", "false");
+      nav.classList.remove("open");
     });
-}
-
-function initHeaderScroll() {
-    const header = document.querySelector('.header');
-    if (!header) return;
-    
-    let lastScroll = 0;
-    
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-    });
-}
-
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
-            
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+  });
 }
