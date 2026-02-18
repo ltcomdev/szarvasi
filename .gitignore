@@ -1,23 +1,18 @@
-# Adobe files
-*.xd
+# Design files - nem kellenek a webhez
 *.psd
-*.psdt
+*.psb
 *.ai
+*.psdt
+*.zip
 
-# Documents
-*.pdf
+# Thumbs
+Thumbs.db
+.DS_Store
 
-# Large asset folders (not needed for web)
+# Mappák amik nem kellenek
 assets/
 gyujtes webre/
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+XD export/
+developer export/
+design spec/
+prototype/

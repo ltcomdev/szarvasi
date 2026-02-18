@@ -3,218 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Szarvasi Mozzarella</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Szarvasi Mozzarella - 25 éve szívvel-lélekkel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- HEADER -->
+    <!-- Header -->
     <header class="header">
         <div class="header-top">
-            <a href="index.html" class="logo">
-                <img src="XD export/logo-szarvasi-mozzarella-primary.png" alt="Szarvasi Mozzarella">
-            </a>
-            
-            <div class="header-right">
-                <div class="search-box">
-                    <input type="text" placeholder="keresés" class="search-input">
-                    <button class="search-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="M21 21l-4.35-4.35"></path>
-                        </svg>
-                    </button>
-                </div>
-                
-                <div class="lang-buttons">
-                    <button class="lang-btn active">HU</button>
-                    <button class="lang-btn">EN</button>
-                </div>
+            <div class="container">
+                <nav class="top-nav">
+                    <a href="#">Rólunk</a>
+                    <a href="#">Partnereink</a>
+                    <a href="#">Kapcsolat</a>
+                </nav>
             </div>
         </div>
-        
-        <nav class="main-nav">
-            <div class="nav-container">
-                <a href="index.html" class="active">FŐOLDAL</a>
-                <a href="termekek.html">TERMÉKEK</a>
-                <a href="cegunkrol.html">CÉGÜNKRŐL</a>
-                <a href="receptjeink.html">RECEPTJEINK</a>
-                <a href="partnereink.html">PARTNEREINK</a>
-                <a href="kapcsolat.html">KAPCSOLAT</a>
+        <div class="header-main">
+            <div class="container header-main-inner">
+                <a href="/" class="logo">
+                    <img src="images/logo.png" alt="Szarvasi Mozzarella">
+                </a>
+                <nav class="main-nav">
+                    <a href="#">Termékek</a>
+                    <a href="#">Receptek</a>
+                </nav>
+                <button class="mobile-menu-btn" aria-label="Menü">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <img src="gyujtes webre/25 ev.png" alt="Több mint 25 éve szívvel-lélekkel" class="hero-badge">
-        </div>
-        <div class="hero-image">
-            <img src="gyujtes webre/XD ezaz/hero-mozzarella-tomato-basil.png" alt="Mozzarella">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h1>SAJT<br>IMÁDÓKNAK</h1>
+                <p>Lorem ipsum dolor sit amet consectetur. Tortor pellentesque nec sit feugiat pellentesque amet nisl massa.</p>
+                <a href="#" class="btn btn-primary">Fedezd fel termékeinket</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.png" alt="Mozzarella paradicsom bazsalikommal">
+            </div>
         </div>
     </section>
 
-    <!-- KATEGÓRIA SÁV -->
+    <!-- Category Section -->
     <section class="category-section">
         <div class="category-bar">
-            <a href="#" class="cat-item active">
-                <img src="XD export/Iconok/Eszköz 1.png" alt="">
-                <span>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 1.png" alt="">
+                <span>Mozzarella</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 2.png" alt="">
-                <span>mini<br>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 2.png" alt="">
+                <span>Mascarpone</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 3.png" alt="">
-                <span>snack<br>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 3.png" alt="">
+                <span>Ricotta</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 4.png" alt="">
-                <span>grill<br>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 4.png" alt="">
+                <span>High Protein</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 5.png" alt="">
-                <span>pizza<br>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 5.png" alt="">
+                <span>Pizza Mozzarella</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 6.png" alt="">
-                <span>szeletelt<br>mozzarella</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 6.png" alt="">
+                <span>Mascarpone</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 7.png" alt="">
-                <span>mascarpone</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 7.png" alt="">
+                <span>Füstölt</span>
             </a>
-            <a href="#" class="cat-item">
-                <img src="XD export/Iconok/Eszköz 8.png" alt="">
-                <span>ricotta</span>
+            <a href="#" class="category-item">
+                <img src="images/iconok/Eszköz 8.png" alt="">
+                <span>Mini</span>
             </a>
         </div>
     </section>
 
-    <!-- TERMÉKEK -->
+    <!-- Products Section -->
     <section class="products-section">
-        <div class="products-container">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">KIEMELT TERMÉKEINK</h2>
+                <a href="#" class="view-all">Összes termék &rarr;</a>
+            </div>
             <div class="products-grid">
-                <a href="termek.html" class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="XD export/Kép1.png" alt="Szarvasi mozzarella light">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/termek1.png" alt="Mozzarella">
                     </div>
-                    <p class="product-name">Szarvasi<br>mozzarella light</p>
-                    <p class="product-weight">100g</p>
-                </a>
-                
-                <a href="termek.html" class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="XD export/Kép2.png" alt="Szarvasi mozzarella">
+                    <div class="product-info">
+                        <span class="product-category">Mozzarella</span>
+                        <h3 class="product-name">Szarvasi Mozzarella</h3>
                     </div>
-                    <p class="product-name">Szarvasi<br>mozzarella</p>
-                    <p class="product-weight">100g</p>
-                </a>
-                
-                <a href="termek.html" class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="XD export/Kép3.png" alt="Szarvasi mozzarella laktózmentes">
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/termek2.png" alt="Mascarpone">
                     </div>
-                    <p class="product-name">Szarvasi<br>mozzarella<br>laktózmentes</p>
-                    <p class="product-weight">100g</p>
-                </a>
-                
-                <a href="termek.html" class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="XD export/Kép4.png" alt="Mozzarella Italia">
+                    <div class="product-info">
+                        <span class="product-category">Mascarpone</span>
+                        <h3 class="product-name">Szarvasi Mascarpone</h3>
                     </div>
-                    <p class="product-name">Mozzarella<br>Italia</p>
-                    <p class="product-weight">100g</p>
-                </a>
-            </div>
-            
-            <div class="products-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/termek3.png" alt="High Protein">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">High Protein</span>
+                        <h3 class="product-name">Szarvasi High Protein</h3>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/termek4.png" alt="Ricotta">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Ricotta</span>
+                        <h3 class="product-name">Szarvasi Ricotta</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- RECEPTEK BANNER -->
+    <!-- Recipes Banner -->
     <section class="recipes-banner">
-        <div class="recipes-banner-image">
-            <img src="assets/AdobeStock_282128014.jpg" alt="Pizza">
+        <div class="recipes-banner-bg">
+            <img src="images/receptek-hero.png" alt="">
         </div>
-        <div class="recipes-title">
-            <span>LEGFRISSEBB</span>
-            <span>RECEPTEK</span>
+        <div class="container recipes-banner-content">
+            <h2 class="recipes-banner-title">LEGFRISSEBB RECEPTEK</h2>
         </div>
     </section>
 
-    <!-- RECEPT KÁRTYÁK -->
+    <!-- Recipes Section -->
     <section class="recipes-section">
-        <div class="recipes-container">
+        <div class="container">
             <div class="recipes-grid">
-                <a href="recept.html" class="recipe-card">
-                    <div class="recipe-img">
-                        <img src="XD export/Recept 1.png" alt="Francia lecsó">
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/recept1.png" alt="Pizza Mozzarellával">
+                        <button class="play-btn" aria-label="Videó lejátszása">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
                     </div>
                     <div class="recipe-info">
-                        <p class="recipe-title">Francia lecsó mediterrán fűszeres grill mozzarellával</p>
-                        <div class="recipe-time">
-                            <span class="time-num">30</span>
-                            <span class="time-label">PERC</span>
-                        </div>
+                        <span class="recipe-category">Pizza</span>
+                        <h3 class="recipe-name">Pizza Mozzarellával</h3>
                     </div>
-                </a>
-                
-                <a href="recept.html" class="recipe-card">
-                    <div class="recipe-img">
-                        <img src="XD export/Recept 2.png" alt="Chili con carne">
-                    </div>
-                    <div class="recipe-info">
-                        <p class="recipe-title">Chili con carne chilis grill mozzarellával</p>
-                        <div class="recipe-time">
-                            <span class="time-num">60</span>
-                            <span class="time-label">PERC</span>
-                        </div>
-                    </div>
-                </a>
-                
-                <a href="recept.html" class="recipe-card">
-                    <div class="recipe-img">
-                        <img src="XD export/Recept 3.png" alt="Pulykamell tekercsek">
+                </article>
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/recept2.png" alt="Caprese saláta">
+                        <button class="play-btn" aria-label="Videó lejátszása">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
                     </div>
                     <div class="recipe-info">
-                        <p class="recipe-title">Pulykamell tekercsek spenóttal és ricottával töltve</p>
-                        <div class="recipe-time">
-                            <span class="time-num">60-90</span>
-                            <span class="time-label">PERC</span>
-                        </div>
+                        <span class="recipe-category">Saláta</span>
+                        <h3 class="recipe-name">Caprese saláta</h3>
                     </div>
-                </a>
+                </article>
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="images/recept3.png" alt="Tiramisu">
+                        <button class="play-btn" aria-label="Videó lejátszása">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="recipe-info">
+                        <span class="recipe-category">Desszert</span>
+                        <h3 class="recipe-name">Tiramisu Mascarpone-val</h3>
+                    </div>
+                </article>
+            </div>
+            <div class="recipes-footer">
+                <a href="#" class="btn btn-secondary">Összes recept</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-social">
-            <a href="#" aria-label="Facebook">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-            </a>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Szarvasi Mozzarella" class="footer-logo">
+                    <p class="footer-tagline">25 éve szívvel-lélekkel</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Termékek</h4>
+                        <ul>
+                            <li><a href="#">Mozzarella</a></li>
+                            <li><a href="#">Mascarpone</a></li>
+                            <li><a href="#">Ricotta</a></li>
+                            <li><a href="#">High Protein</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Információ</h4>
+                        <ul>
+                            <li><a href="#">Rólunk</a></li>
+                            <li><a href="#">Partnereink</a></li>
+                            <li><a href="#">Kapcsolat</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Receptek</h4>
+                        <ul>
+                            <li><a href="#">Pizza receptek</a></li>
+                            <li><a href="#">Saláták</a></li>
+                            <li><a href="#">Desszertek</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Szarvasi Mozzarella. Minden jog fenntartva.</p>
+            </div>
         </div>
-        <p class="footer-copy">&copy; 2026 Szarvasi Mozzarella Kft. Minden jog fenntartva.</p>
     </footer>
 
     <script src="script.js"></script>
