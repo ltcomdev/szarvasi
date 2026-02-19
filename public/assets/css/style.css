@@ -271,7 +271,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 42% 58%;
   align-items: center;
   min-height: 638px;
   padding-top: 20px;
@@ -340,7 +340,7 @@ ul { list-style: none; }
 }
 .hero-image img {
   width: 100%;
-  max-width: 1057px;
+  max-width: none;
   filter: drop-shadow(0 24px 48px rgba(0,0,0,.18));
 }
 
