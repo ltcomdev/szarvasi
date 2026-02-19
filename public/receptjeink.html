@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receptjeink – Szarvasi Mozzarella</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html">
+          <img src="assets/images/logo-szarvasi-mozzarella.webp" alt="Szarvasi Mozzarella">
+        </a>
+        <ul class="site-nav">
+          <li><a href="index.html">Főoldal</a></li>
+          <li><a href="termekek.html">Termékek</a></li>
+          <li class="has-dropdown">
+            <a href="rolunk.html">Rólunk</a>
+            <ul class="dropdown-menu">
+              <li><a href="rolunk.html">Cégünkről</a></li>
+              <li><a href="#">Állások</a></li>
+              <li><a href="media.html">Média megjelenések</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="receptjeink.html" class="active">Receptjeink</a></li>
+          <li><a href="#">Partnereink</a></li>
+          <li><a href="#kapcsolat">Kapcsolat</a></li>
+        </ul>
+        <div class="header-tools">
+          <button class="search-btn" aria-label="Keresés">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <span class="lang-switch"><span class="active">HU</span> | EN</span>
+        </div>
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menü">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>Receptjeink</h1>
+      <div class="accent-line accent-line--center"></div>
+    </div>
+  </div>
+
+  <!-- RECIPE GRID
+       Design: search bar, 3×3 recipe card grid
+  -->
+  <section class="receptek-page-section">
+    <div class="container">
+
+      <div class="search-bar">
+        <input type="search" placeholder="Recept Kereső" aria-label="Recept keresése">
+        <span class="search-bar-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </span>
+      </div>
+
+      <div class="receptek-grid">
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-francia-lecso.webp" alt="Francia lecsó mediterrán fűszeres grill mozzarellával" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Francia lecsó mediterrán fűszeres grill mozzarellával</h3>
+            <span class="receptek-card-time">30 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-chili-con-carne.webp" alt="Chili con carne chilis grill mozzarellával" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Chili con carne chilis grill mozzarellával</h3>
+            <span class="receptek-card-time">60 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-pulykamell-ricottaval.webp" alt="Pulykamell tekercsek spenóttal és ricottával töltve" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Pulykamell tekercsek spenóttal és ricottával töltve</h3>
+            <span class="receptek-card-time">60-90 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-pizza-hero.webp" alt="Mozzarellás pizza" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Klasszikus mozzarellás pizza</h3>
+            <span class="receptek-card-time">45 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-francia-lecso.webp" alt="Grillezett mozzarellás saláta" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Grillezett mozzarellás saláta</h3>
+            <span class="receptek-card-time">20 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-chili-con-carne.webp" alt="Ricottás töltött paprika" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Ricottás töltött paprika</h3>
+            <span class="receptek-card-time">50 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-pulykamell-ricottaval.webp" alt="Mascarpone tiramisu" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Mascarpone tiramisu</h3>
+            <span class="receptek-card-time">30 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-pizza-hero.webp" alt="Caprese saláta" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Caprese saláta friss mozzarellával</h3>
+            <span class="receptek-card-time">10 PERC</span>
+          </div>
+        </article>
+
+        <article class="receptek-card">
+          <img src="assets/images/recipe-francia-lecso.webp" alt="Mozzarellás lasagne" class="receptek-card-img">
+          <div class="receptek-card-body">
+            <h3 class="receptek-card-title">Mozzarellás lasagne</h3>
+            <span class="receptek-card-time">80 PERC</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="kapcsolat">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 720,0 1080,48 C1260,72 1380,24 1440,40 L1440,80 L0,80 Z" fill="#fcf7d8"/>
+      </svg>
+    </div>
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <h4>Elérhetőségeink:</h4>
+            <p>2040, Budaörs, Gyár u. 2.<br>+36 20 772 3762<br>info@szarvasimozzarella.hu</p>
+          </div>
+          <div class="footer-social">
+            <h4>Kövess minket!</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <nav class="footer-links">
+            <a href="rolunk.html">Rólunk</a><a href="#">Adatvédelem</a><a href="media.html">Média</a>
+            <a href="#">ÁSZF</a><a href="#">Bemutatkozó</a><a href="#">Blog</a>
+            <a href="#">Hírlevél</a><a href="#">Energetikai jelentés</a><a href="#">Állásajánlatok</a>
+          </nav>
+          <p class="footer-copy">Minden jog fentartva © 2025</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

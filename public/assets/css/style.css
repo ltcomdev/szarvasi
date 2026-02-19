@@ -1,0 +1,1153 @@
+/* ================================================================
+   SZARVASI MOZZARELLA — style.css
+   Design tokens: Adobe XD globalResources.json
+   Fonts: Poppins (display, ~Azo Sans) + Roboto (body)
+   Colors: exact HEX from XD color swatches
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+/* ── Design Tokens ────────────────────────────────────────────── */
+:root {
+  /* Brand colors (from globalResources.json) */
+  --green-dark:   #204825;   /* hero bg, primary dark green */
+  --green:        #057a52;   /* brand green */
+  --lime:         #88a740;   /* product labels */
+  --lime-label:   #d5dd64;   /* product card label bg */
+  --orange:       #f76500;   /* CTA, accent underlines, category strip */
+  --yellow:       #f6f643;   /* small highlights */
+  --cream:        #fcf7d8;   /* footer bg */
+  --off-white:    #f6f4e7;   /* section bg */
+  --white:        #ffffff;
+  --black:        #000000;
+  --text:         #3c290f;   /* dark brown body text */
+  --muted:        #707070;   /* secondary text */
+  --card-bg:      #f2f2f2;   /* product card background */
+
+  /* Typography */
+  --font-display: 'Poppins', sans-serif;
+  --font-body:    'Roboto', sans-serif;
+
+  /* Layout */
+  --container: 1380px;
+  --gap: 48px;
+  --radius: 20px;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-body); color: var(--text); background: var(--white); }
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+button { font-family: var(--font-body); cursor: pointer; }
+ul { list-style: none; }
+
+/* ── Container ────────────────────────────────────────────────── */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+/* ── Shared Button ────────────────────────────────────────────── */
+.btn-orange {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 48px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: none;
+  transition: background .2s, transform .15s;
+}
+.btn-orange:hover {
+  background: #d95b00;
+  transform: translateY(-2px);
+}
+
+.btn-outline-green {
+  display: inline-block;
+  border: 2px solid var(--green-dark);
+  color: var(--green-dark);
+  background: none;
+  padding: 12px 28px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .2s;
+}
+.btn-outline-green:hover {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+/* ── Accent line ──────────────────────────────────────────────── */
+.accent-line {
+  width: 56px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin-top: 14px;
+}
+.accent-line--center { margin-left: auto; margin-right: auto; }
+
+/* ── Section title ────────────────────────────────────────────── */
+.section-title {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.section-title h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 48px);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================================================================
+   HEADER
+   ================================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  height: 76px;
+  gap: 0;
+}
+
+/* Logo */
+.site-logo { flex-shrink: 0; margin-right: 40px; }
+.site-logo img { height: 52px; width: auto; }
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+}
+.site-nav > li { position: relative; }
+.site-nav > li > a {
+  display: block;
+  padding: 8px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  transition: color .2s;
+  white-space: nowrap;
+  position: relative;
+}
+.site-nav > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  right: 18px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+.site-nav > li > a:hover { color: var(--orange); }
+.site-nav > li > a:hover::after { transform: scaleX(1); }
+.site-nav > li > a.active { color: var(--orange); }
+.site-nav > li > a.active::after { transform: scaleX(1); }
+
+/* Dropdown */
+.has-dropdown { position: relative; }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.13);
+  min-width: 210px;
+  padding: 8px 0;
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .2s, transform .2s;
+}
+.has-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 11px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  transition: background .15s, color .15s;
+}
+.dropdown-menu li a:hover {
+  background: var(--off-white);
+  color: var(--orange);
+}
+
+/* Header tools */
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.search-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1;
+  transition: color .2s;
+}
+.search-btn:hover { color: var(--orange); }
+.lang-switch {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.lang-switch .active { color: var(--orange); }
+
+/* Mobile toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--text);
+  margin-left: 16px;
+}
+
+/* ================================================================
+   HERO — Főoldal
+   Design: dark green organic rounded container, large white heading,
+           product collage image on the right overlapping
+   ================================================================ */
+.hero-section {
+  background: var(--white);
+  padding: 40px 0 56px;
+  overflow: hidden;
+}
+
+.hero-section .container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  align-items: center;
+  gap: 0;
+}
+
+.hero-content {
+  background: var(--green-dark);
+  border-radius: 0 280px 280px 0;
+  padding: 72px 120px 72px var(--gap);
+  position: relative;
+  z-index: 1;
+  margin-left: calc(var(--gap) * -1);
+  padding-left: calc(var(--gap) + 40px);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.0;
+  margin-bottom: 20px;
+}
+.hero-title .line-1 {
+  display: block;
+  font-size: clamp(36px, 5.7vw, 88px);
+  letter-spacing: -1px;
+}
+.hero-title .line-2 {
+  display: block;
+  font-size: clamp(52px, 9vw, 138px);
+  letter-spacing: -2px;
+}
+
+.hero-accent {
+  width: 72px;
+  height: 5px;
+  background: var(--orange);
+  border-radius: 3px;
+  margin-bottom: 28px;
+}
+
+.hero-desc {
+  font-size: clamp(14px, 1.1vw, 17px);
+  color: rgba(255,255,255,.82);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 2;
+  margin-left: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 580px;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,.22));
+}
+
+/* ================================================================
+   CATEGORY STRIP
+   Design: full-width orange rounded-pill bar, 8 icon+label items
+   ================================================================ */
+.category-strip {
+  background: var(--orange);
+  padding: 0;
+}
+
+.categories-inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.cat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 12px;
+  flex: 1;
+  cursor: pointer;
+  transition: background .2s;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.cat-item:last-child { border-right: none; }
+.cat-item:hover { background: rgba(0,0,0,.12); }
+
+.cat-item img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.cat-item span {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  line-height: 1.3;
+}
+
+/* ================================================================
+   PRODUCTS CAROUSEL — Főoldal
+   Design: white bg, 4 cards visible, left/right arrows, dots
+   ================================================================ */
+.products-section {
+  padding: 72px 0 56px;
+  background: var(--white);
+}
+
+.carousel-outer {
+  position: relative;
+  padding: 0 56px;
+}
+
+.carousel-track-wrap { overflow: hidden; }
+
+.carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+
+.product-card {
+  flex: 0 0 calc(25% - 18px);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.1);
+}
+.product-card-img {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.product-card-img img {
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
+}
+.product-card-name {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+.product-card-weight {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.14);
+  font-size: 22px;
+  color: var(--text);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow .2s, background .2s;
+}
+.carousel-arrow:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,.2);
+  background: var(--off-white);
+}
+.carousel-arrow.prev { left: 0; }
+.carousel-arrow.next { right: 0; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+}
+.dot.active { background: var(--orange); }
+
+/* ================================================================
+   RECEPTEK SECTION — Főoldal
+   Design: off-white bg, left text / right circular image, then cards
+   ================================================================ */
+.receptek-section {
+  background: var(--off-white);
+  padding: 80px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.receptek-inner {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 56px;
+}
+
+.receptek-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 4.2vw, 64px);
+  color: var(--black);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+.receptek-desc {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-top: 28px;
+}
+
+.receptek-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.receptek-circle-img {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 24px 64px rgba(0,0,0,.18);
+}
+
+/* Recipe cards */
+.recipe-cards-section {
+  background: var(--off-white);
+  padding: 0 0 80px;
+}
+
+.recipe-carousel-outer {
+  position: relative;
+  padding: 0 56px;
+}
+
+.recipe-cards-track-wrap { overflow: hidden; }
+.recipe-cards-track {
+  display: flex;
+  gap: 24px;
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+
+.recipe-card {
+  flex: 0 0 calc(33.333% - 16px);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.recipe-card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+.recipe-card:hover .recipe-card-img { transform: scale(1.04); }
+.recipe-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.72) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 22px 22px;
+}
+.recipe-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.recipe-card-time {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.recipe-cta {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+/* ================================================================
+   FOOTER
+   Design: cream wave at top, 2-col contact/social, bottom nav
+   ================================================================ */
+.site-footer {
+  position: relative;
+  background: var(--white);
+}
+
+.footer-wave {
+  overflow: hidden;
+  line-height: 0;
+  background: var(--white);
+}
+.footer-wave svg { display: block; width: 100%; }
+
+.footer-body {
+  background: var(--cream);
+  padding: 48px 0 28px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(60,41,15,.15);
+  margin-bottom: 24px;
+}
+
+.footer-contact h4 {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.footer-contact p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.footer-social h4 {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 12px;
+  text-align: right;
+}
+.social-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.social-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+.social-icon:hover { background: var(--orange); }
+.social-icon svg { width: 22px; height: 22px; fill: var(--white); }
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.footer-links a {
+  padding: 4px 12px;
+  border-right: 1px solid var(--muted);
+  color: var(--muted);
+  font-size: 13px;
+  transition: color .15s;
+}
+.footer-links a:last-child { border-right: none; }
+.footer-links a:hover { color: var(--orange); }
+.footer-copy { font-size: 12px; color: var(--muted); }
+
+/* ================================================================
+   PAGE HERO — inner pages (Termékek, Rólunk, etc.)
+   Design: centered title with orange underline accent
+   ================================================================ */
+.page-hero {
+  padding: 60px 0 44px;
+  text-align: center;
+  background: var(--white);
+}
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 56px);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================================================================
+   TERMÉKEK PAGE
+   Design: 3×3 grid, rounded cards, lime-label at bottom of each
+   ================================================================ */
+.products-grid-section {
+  padding: 0 0 80px;
+  background: var(--white);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.product-tile {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .22s, box-shadow .22s;
+  display: flex;
+  flex-direction: column;
+}
+.product-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.product-tile-img {
+  flex: 1;
+  padding: 36px 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+.product-tile-img img {
+  max-height: 200px;
+  width: auto;
+  object-fit: contain;
+  transition: transform .3s;
+}
+.product-tile:hover .product-tile-img img { transform: scale(1.05); }
+.product-tile-label {
+  background: var(--lime-label);
+  padding: 14px 20px;
+  text-align: center;
+}
+.product-tile-label span {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+/* ================================================================
+   HIGH PROTEIN PAGE
+   Design: dark hero section, 3 product variant rows, nutrition table,
+           similar products + related recipes at bottom
+   ================================================================ */
+.hp-hero {
+  background: #1c1c1c;
+  padding: 80px 0;
+  color: var(--white);
+}
+.hp-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  align-items: center;
+  gap: 60px;
+}
+.hp-hero-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--lime-label);
+  margin-bottom: 16px;
+}
+.hp-hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5.2vw, 80px);
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.hp-hero-title span { color: var(--lime-label); }
+.hp-hero-img { display: flex; justify-content: center; }
+.hp-hero-img img {
+  max-width: 100%;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.4));
+}
+
+.hp-variants-section {
+  padding: 64px 0 48px;
+  background: var(--white);
+}
+
+.hp-variant {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--card-bg);
+}
+.hp-variant:last-child { border-bottom: none; }
+.hp-variant-img { border-radius: 16px; overflow: hidden; background: var(--card-bg); padding: 20px; display: flex; align-items: center; justify-content: center; min-height: 200px; }
+.hp-variant-img img { max-height: 180px; width: auto; object-fit: contain; }
+.hp-variant-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+}
+.hp-variant-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.hp-variant-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 20px;
+  max-width: 520px;
+}
+.hp-variant-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+.hp-variant-ingredients {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.hp-variant-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.nutrition-section {
+  padding: 0 0 64px;
+  background: var(--white);
+}
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.nutrition-table thead th {
+  background: var(--lime);
+  color: var(--white);
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 700;
+}
+.nutrition-table tbody td {
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--card-bg);
+}
+.nutrition-table tbody tr:nth-child(even) td { background: var(--off-white); }
+.nutrition-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* ================================================================
+   RÓLUNK / CÉGÜNKRŐL PAGE
+   Design: centered title, orange quote section, body text + factory img
+   ================================================================ */
+.about-quote-section {
+  background: var(--orange);
+  padding: 72px 0;
+}
+.about-quote-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+blockquote.about-quote {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 34px);
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.45;
+  quotes: '\201E' '\201D';
+}
+blockquote.about-quote::before { content: open-quote; }
+blockquote.about-quote::after  { content: close-quote; }
+.about-quote-img { border-radius: 16px; overflow: hidden; }
+.about-quote-img img { width: 100%; height: 400px; object-fit: cover; }
+
+.about-body-section { padding: 80px 0; }
+.about-lead {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.65;
+  color: var(--text);
+  margin-bottom: 52px;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-split {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 56px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-split-img { border-radius: 16px; overflow: hidden; }
+.about-split-img img { width: 100%; height: 300px; object-fit: cover; }
+.about-body-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+.about-body-text p:last-child { margin-bottom: 0; }
+.about-body-text strong { font-weight: 700; }
+
+/* ================================================================
+   MÉDIA MEGJELENÉSEK PAGE
+   Design: centered title, 3×3 video thumbnail grid with play button
+   ================================================================ */
+.media-grid-section { padding: 0 0 80px; background: var(--white); }
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.media-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16/9;
+  background: #111;
+}
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .85;
+  transition: opacity .25s;
+}
+.media-card:hover img { opacity: .6; }
+.media-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+.media-card:hover .media-play-btn { background: rgba(247,101,0,.8); border-color: transparent; }
+.media-play-btn::after {
+  content: '';
+  border-left: 24px solid rgba(255,255,255,.95);
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  margin-left: 6px;
+}
+
+/* ================================================================
+   RECEPTJEINK PAGE
+   Design: centered title, search bar, 3×3 recipe card grid
+   ================================================================ */
+.receptek-page-section { padding: 0 0 80px; background: var(--white); }
+
+.search-bar {
+  max-width: 420px;
+  margin: 0 auto 52px;
+  position: relative;
+}
+.search-bar input {
+  width: 100%;
+  padding: 15px 52px 15px 22px;
+  border: 1.5px solid #ddd;
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color .2s;
+  color: var(--text);
+  background: var(--white);
+}
+.search-bar input:focus { border-color: var(--orange); }
+.search-bar input::placeholder { color: var(--muted); }
+.search-bar-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 18px;
+  pointer-events: none;
+}
+
+.receptek-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.receptek-card {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .22s, box-shadow .22s;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+.receptek-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.receptek-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+.receptek-card:hover .receptek-card-img { transform: scale(1.04); }
+.receptek-card-body {
+  padding: 16px 18px 20px;
+}
+.receptek-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.receptek-card-time {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* ================================================================
+   HASONLÓ TERMÉKEK & KAPCSOLÓDÓ RECEPTEK
+   (used on product detail pages)
+   ================================================================ */
+.similar-section {
+  padding: 64px 0;
+  background: var(--off-white);
+}
+.related-recipes-section {
+  padding: 64px 0 80px;
+  background: var(--white);
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 1200px) {
+  :root { --gap: 36px; }
+  .hero-section .container { grid-template-columns: 1fr 400px; }
+  .hero-content { padding: 56px 80px 56px calc(var(--gap) + 20px); }
+  .hero-image img { max-width: 460px; }
+  .receptek-circle-img { width: 400px; height: 400px; }
+}
+
+@media (max-width: 1024px) {
+  :root { --gap: 28px; }
+  .hero-section .container { grid-template-columns: 1fr; }
+  .hero-content { border-radius: 0 80px 80px 0; padding: 52px 40px; margin-left: 0; }
+  .hero-image { margin-left: 0; margin-top: 32px; justify-content: center; }
+  .hero-image img { max-width: 80%; }
+  .receptek-inner { grid-template-columns: 1fr; }
+  .receptek-circle-img { width: 360px; height: 360px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .hp-hero-inner { grid-template-columns: 1fr; }
+  .hp-variant { grid-template-columns: 1fr; }
+  .about-quote-inner { grid-template-columns: 1fr; }
+  .about-split { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  :root { --gap: 20px; }
+
+  /* Header */
+  .menu-toggle { display: block; }
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 12px 0 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    z-index: 200;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .site-nav.open { display: flex; }
+  .site-nav > li > a { padding: 12px 24px; }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    display: none;
+    padding: 0 0 0 16px;
+    border-radius: 0;
+  }
+  .has-dropdown.open .dropdown-menu { display: block; }
+
+  /* Hero */
+  .hero-content { border-radius: 16px; margin: 0 var(--gap); padding: 40px 28px; }
+  .hero-image { margin-top: 24px; }
+  .hero-image img { max-width: 90%; }
+
+  /* Category strip */
+  .cat-item span { font-size: 10px; }
+  .cat-item img { height: 36px; }
+
+  /* Products carousel */
+  .carousel-outer { padding: 0 40px; }
+  .product-card { flex: 0 0 calc(50% - 12px); }
+
+  /* Recipe cards */
+  .recipe-carousel-outer { padding: 0 40px; }
+  .recipe-card { flex: 0 0 calc(100% - 0px); }
+
+  /* Grids */
+  .products-grid { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: repeat(2, 1fr); }
+  .receptek-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* About */
+  .about-quote-img img { height: 260px; }
+  .about-split-img img { height: 220px; }
+}
+
+@media (max-width: 520px) {
+  .media-grid { grid-template-columns: 1fr; }
+  .receptek-grid { grid-template-columns: 1fr; }
+  .categories-inner { flex-wrap: wrap; }
+  .cat-item { flex: 0 0 25%; border-right: none; }
+  .product-card { flex: 0 0 calc(100% - 0px); }
+  .receptek-circle-img { width: 280px; height: 280px; }
+}

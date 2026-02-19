@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Szarvasi Mozzarella – Főoldal</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="site-logo" href="index.html">
+          <img src="assets/images/logo-szarvasi-mozzarella.webp" alt="Szarvasi Mozzarella">
+        </a>
+
+        <ul class="site-nav">
+          <li><a href="index.html" class="active">Főoldal</a></li>
+          <li><a href="termekek.html">Termékek</a></li>
+          <li class="has-dropdown">
+            <a href="rolunk.html">Rólunk</a>
+            <ul class="dropdown-menu">
+              <li><a href="rolunk.html">Cégünkről</a></li>
+              <li><a href="#">Állások</a></li>
+              <li><a href="media.html">Média megjelenések</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="receptjeink.html">Receptjeink</a></li>
+          <li><a href="#">Partnereink</a></li>
+          <li><a href="#kapcsolat">Kapcsolat</a></li>
+        </ul>
+
+        <div class="header-tools">
+          <button class="search-btn" aria-label="Keresés">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+          <span class="lang-switch"><span class="active">HU</span> | EN</span>
+        </div>
+
+        <button class="menu-toggle" aria-expanded="false" aria-label="Menü">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+       Design: dark green organic-rounded container, 2-line display
+               headline, orange accent, desc text, product collage
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="line-1">FRISS, HAZAI</span>
+          <span class="line-2">MOZZARELLA</span>
+        </h1>
+        <div class="hero-accent"></div>
+        <p class="hero-desc">
+          Cégünk 25 éve foglalkozik szívvel-lélekkel a mozzarellával. A legjobb
+          minőséget a tradicionális értékek és a modern technológia ötvözésével
+          érjük el. Naponta 100.000 liter, kizárólag hazai tej felhasználásával
+          készítjük termékeinket.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/hero-product-collage.webp" alt="Szarvasi Mozzarella termékek">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CATEGORY STRIP
+       Design: full-width orange bar, 8 icon+label items
+  ══════════════════════════════════════════════════════════════ -->
+  <nav class="category-strip" aria-label="Termék kategóriák">
+    <div class="container">
+      <ul class="categories-inner">
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-mozzarella.webp" alt="">
+            <span>mozzarella</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-mozzafit.webp" alt="">
+            <span>érlelő mozzarella</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-mozzarella.webp" alt="">
+            <span>grill mozzarella</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-pizza-mozzarella.webp" alt="">
+            <span>pizza mozzarella</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-szeletelt-mozzarella.webp" alt="">
+            <span>szeletelt mozzarella</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-mascarpone.webp" alt="">
+            <span>mascarpone</span>
+          </a>
+        </li>
+        <li>
+          <a href="termekek.html" class="cat-item">
+            <img src="assets/images/icon-ricotta.webp" alt="">
+            <span>ricotta</span>
+          </a>
+        </li>
+        <li>
+          <a href="high-protein.html" class="cat-item">
+            <img src="assets/images/icon-high-protein.webp" alt="">
+            <span>high protein</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PRODUCTS CAROUSEL
+       Design: white bg, 4 product cards, left/right arrows, dots
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="products-section">
+    <div class="container">
+      <div class="carousel-outer">
+        <button class="carousel-arrow prev" aria-label="Előző">&#8249;</button>
+
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" data-carousel-track>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-mozzarella-light.webp" alt="Szarvasi mozzarella light">
+              </div>
+              <p class="product-card-name">Szarvasi mozzarella light</p>
+              <p class="product-card-weight">100g</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-mozzarella-classic.webp" alt="Szarvasi mozzarella">
+              </div>
+              <p class="product-card-name">Szarvasi mozzarella</p>
+              <p class="product-card-weight">100g</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-mozzarella-multipack.webp" alt="Szarvasi mozzarella laktózmentes">
+              </div>
+              <p class="product-card-name">Szarvasi mozzarella laktózmentes</p>
+              <p class="product-card-weight">100g</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-mozzarella-mini.webp" alt="Mozzarella Itália">
+              </div>
+              <p class="product-card-name">Mozzarella Itália</p>
+              <p class="product-card-weight">100g</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-grill-mozzarella.webp" alt="Grill mozzarella">
+              </div>
+              <p class="product-card-name">Szarvasi grill mozzarella</p>
+              <p class="product-card-weight">150g</p>
+            </div>
+
+            <div class="product-card">
+              <div class="product-card-img">
+                <img src="assets/images/product-mascarpone.webp" alt="Szarvasi mascarpone">
+              </div>
+              <p class="product-card-name">Szarvasi mascarpone</p>
+              <p class="product-card-weight">250g</p>
+            </div>
+
+          </div>
+        </div>
+
+        <button class="carousel-arrow next" aria-label="Következő">&#8250;</button>
+      </div>
+      <div class="carousel-dots"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       RECEPTEK
+       Design: off-white bg, "RECEPTEK" left + circular pizza right,
+               then 3 recipe cards carousel, CTA button
+  ══════════════════════════════════════════════════════════════ -->
+  <section class="receptek-section">
+    <div class="container">
+      <div class="receptek-inner">
+        <div class="receptek-text">
+          <h2 class="receptek-heading">RECEPTEK</h2>
+          <div class="accent-line"></div>
+          <p class="receptek-desc">
+            Fedezze fel ízletes receptjeinket, amelyeket a Szarvasi Mozzarella
+            termékeinkkel készíthet el. Könnyű hétköznapi fogásoktól az ünnepi
+            ételekig – minden alkalomra találunk inspirációt.
+          </p>
+        </div>
+        <div class="receptek-image">
+          <img
+            src="assets/images/recipe-pizza-hero.webp"
+            alt="Mozzarellás pizza"
+            class="receptek-circle-img"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recipe-cards-section">
+    <div class="container">
+      <div class="recipe-carousel-outer">
+        <button class="carousel-arrow prev" aria-label="Előző">&#8249;</button>
+
+        <div class="recipe-cards-track-wrap">
+          <div class="recipe-cards-track" data-carousel-track>
+
+            <article class="recipe-card">
+              <img
+                src="assets/images/recipe-francia-lecso.webp"
+                alt="Francia lecsó mediterrán fűszeres grill mozzarellával"
+                class="recipe-card-img"
+              >
+              <div class="recipe-card-overlay">
+                <h3 class="recipe-card-title">Francia lecsó mediterrán fűszeres grill mozzarellával</h3>
+                <span class="recipe-card-time">30 PERC</span>
+              </div>
+            </article>
+
+            <article class="recipe-card">
+              <img
+                src="assets/images/recipe-chili-con-carne.webp"
+                alt="Chili con carne chilis grill mozzarellával"
+                class="recipe-card-img"
+              >
+              <div class="recipe-card-overlay">
+                <h3 class="recipe-card-title">Chili con carne chilis grill mozzarellával</h3>
+                <span class="recipe-card-time">60 PERC</span>
+              </div>
+            </article>
+
+            <article class="recipe-card">
+              <img
+                src="assets/images/recipe-pulykamell-ricottaval.webp"
+                alt="Pulykamell tekercsek spenóttal és ricottával töltve"
+                class="recipe-card-img"
+              >
+              <div class="recipe-card-overlay">
+                <h3 class="recipe-card-title">Pulykamell tekercsek spenóttal és ricottával töltve</h3>
+                <span class="recipe-card-time">60-90 PERC</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="carousel-arrow next" aria-label="Következő">&#8250;</button>
+      </div>
+      <div class="carousel-dots"></div>
+
+      <div class="recipe-cta">
+        <a href="receptjeink.html" class="btn-orange">További receptek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" id="kapcsolat">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 720,0 1080,48 C1260,72 1380,24 1440,40 L1440,80 L0,80 Z" fill="#fcf7d8"/>
+      </svg>
+    </div>
+    <div class="footer-body">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-contact">
+            <h4>Elérhetőségeink:</h4>
+            <p>
+              2040, Budaörs, Gyár u. 2.<br>
+              +36 20 772 3762<br>
+              info@szarvasimozzarella.hu
+            </p>
+          </div>
+          <div class="footer-social">
+            <h4>Kövess minket!</h4>
+            <div class="social-icons">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <nav class="footer-links">
+            <a href="rolunk.html">Rólunk</a>
+            <a href="#">Adatvédelem</a>
+            <a href="media.html">Média</a>
+            <a href="#">ÁSZF</a>
+            <a href="#">Bemutatkozó</a>
+            <a href="#">Blog</a>
+            <a href="#">Hírlevél</a>
+            <a href="#">Energetikai jelentés</a>
+            <a href="#">Állásajánlatok</a>
+          </nav>
+          <p class="footer-copy">Minden jog fentartva © 2025</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
