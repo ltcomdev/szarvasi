@@ -124,14 +124,13 @@ ul { list-style: none; }
   overflow: visible;
 }
 
-/* Nav hullam — only peeks into the top-right corner of the hero */
+/* Nav hullam — anchored to top-right corner, just below lang switcher */
 .nav-hullam-shape {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
-  width: 26%;
-  max-width: 420px;
-  transform: translateY(28%);
+  width: 22%;
+  max-width: 360px;
   z-index: 1;
   pointer-events: none;
   user-select: none;
@@ -280,13 +279,13 @@ ul { list-style: none; }
   padding-bottom: 20px;
 }
 
-/* Green organic blob — right-aligned, covers ~78% of the hero */
+/* Green organic blob — fixed 1851px wide, right-aligned */
 .hero-bg-shape {
   position: absolute;
-  right: -2%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 78%;
+  width: 1851px;
   max-width: none;
   height: auto;
   z-index: 1;
@@ -1117,16 +1116,16 @@ blockquote.about-quote::after  { content: close-quote; }
   .hero-content { padding: 52px 32px 52px 0; }
   .hero-image img { max-width: 100%; }
   .receptek-circle-img { width: 380px; }
-  .nav-hullam-shape { width: 30%; }
-  .hero-bg-shape { width: 82%; }
+  .nav-hullam-shape { width: 26%; }
+  .hero-bg-shape { width: 1600px; }
 }
 
 @media (max-width: 1024px) {
   :root { --gap: 28px; }
   .hero-section .container { grid-template-columns: 1fr; }
   .hero-content { padding: 48px 28px 0; }
-  .hero-bg-shape { width: 95%; right: -2%; }
-  .nav-hullam-shape { width: 45%; }
+  .hero-bg-shape { width: 1200px; }
+  .nav-hullam-shape { width: 38%; }
   .hero-image { justify-content: center; }
   .hero-image img { max-width: 80%; }
   .receptek-inner { grid-template-columns: 1fr; }
@@ -1173,7 +1172,7 @@ blockquote.about-quote::after  { content: close-quote; }
 
   /* Hero */
   .hero-content { padding: 40px 20px 0; }
-  .hero-bg-shape { width: 115%; right: -5%; }
+  .hero-bg-shape { width: 900px; }
   .nav-hullam-shape { display: none; }
   .hero-image { justify-content: center; }
   .hero-image img { max-width: 90%; }
