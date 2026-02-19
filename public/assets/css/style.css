@@ -337,6 +337,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 20px;
 }
 .hero-image img {
   width: 100%;
