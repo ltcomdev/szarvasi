@@ -273,18 +273,18 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: 55% 45%;
   align-items: center;
-  min-height: 580px;
+  min-height: 638px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Green organic blob — 1380px wide (matches container), right-aligned */
+/* Green organic blob — 1242px wide (1380 -10%), centered */
 .hero-bg-shape {
   position: absolute;
-  right: 0;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  width: 1380px;
+  transform: translate(-50%, -50%);
+  width: 1242px;
   max-width: none;
   height: auto;
   z-index: 1;
