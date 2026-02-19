@@ -284,7 +284,7 @@ ul { list-style: none; }
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1242px;
+  width: 1304px;
   max-width: none;
   height: auto;
   z-index: 1;
@@ -340,7 +340,7 @@ ul { list-style: none; }
 }
 .hero-image img {
   width: 100%;
-  max-width: 600px;
+  max-width: 660px;
   filter: drop-shadow(0 24px 48px rgba(0,0,0,.18));
 }
 
