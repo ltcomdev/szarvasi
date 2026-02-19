@@ -296,6 +296,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   padding: 40px 24px 40px 0;
+  margin-left: 20px;
 }
 
 .hero-title {
@@ -338,6 +339,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: flex-end;
   margin-right: calc(-1 * var(--gap));
+  margin-left: 20px;
 }
 .hero-image img {
   width: 100%;
