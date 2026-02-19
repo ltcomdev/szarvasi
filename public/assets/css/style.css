@@ -339,11 +339,11 @@ ul { list-style: none; }
   align-items: center;
   justify-content: flex-end;
   margin-right: calc(-1 * var(--gap));
-  margin-left: 50px;
 }
 .hero-image img {
   width: 100%;
   max-width: none;
+  transform: translateX(50px);
   filter: drop-shadow(0 24px 48px rgba(0,0,0,.18));
 }
 
