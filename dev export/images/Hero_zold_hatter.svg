@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1851.885" height="886.446" viewBox="0 0 1851.885 886.446">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.662" cy="0.487" r="0.371" gradientTransform="matrix(1, 0, 0, 1.886, 0, -0.431)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f6f043"/>
+      <stop offset="0.544" stop-color="#7ba522"/>
+      <stop offset="1" stop-color="#057a52"/>
+    </radialGradient>
+  </defs>
+  <path id="High_protein_termekek_reszletes_hatter" d="M2327.79,4369.687c12.638-3.431,25.2-6.8,36.7-9.857,769.271-204.345,1259.4-200.456,1149.837-589.061-111.344-394.924-419.257-57.855-1259.582-243.565-778.136-171.968-729.824,880.83-91.424,867.325a627.8,627.8,0,0,0,76.775-6.472A739.762,739.762,0,0,0,2327.79,4369.687Z" transform="translate(-1677.707 -3508.21)" fill="url(#radial-gradient)"/>
+</svg>
