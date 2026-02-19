@@ -49,11 +49,26 @@
 
   <!-- ══════════════════════════════════════════════════════════
        HERO
-       Design: dark green organic-rounded container, 2-line display
-               headline, orange accent, desc text, product collage
+       Design: Hero_zold_hatter.png (green organic blob, left)
+               Nav hullam.png (cream blob, right bg)
+               product collage on top right
   ══════════════════════════════════════════════════════════════ -->
   <section class="hero-section">
+    <!-- Cream bg blob — right side, behind product image -->
+    <img
+      src="assets/images/nav-hullam.png"
+      alt=""
+      class="hero-nav-hullam"
+      aria-hidden="true"
+    >
     <div class="container">
+      <!-- Green organic blob — behind text -->
+      <img
+        src="assets/images/hero-zold-hatter.png"
+        alt=""
+        class="hero-bg-shape"
+        aria-hidden="true"
+      >
       <div class="hero-content">
         <h1 class="hero-title">
           <span class="line-1">FRISS, HAZAI</span>
@@ -202,8 +217,15 @@
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
+       RECEPTEK HULLAM — wave divider (Receptek hullam.png)
+  ══════════════════════════════════════════════════════════════ -->
+  <div class="receptek-hullam" aria-hidden="true">
+    <img src="assets/images/receptek-hullam.png" alt="">
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
        RECEPTEK
-       Design: off-white bg, "RECEPTEK" left + circular pizza right,
+       Design: cream bg, "RECEPTEK" left + pizza oval image right,
                then 3 recipe cards carousel, CTA button
   ══════════════════════════════════════════════════════════════ -->
   <section class="receptek-section">
@@ -220,7 +242,7 @@
         </div>
         <div class="receptek-image">
           <img
-            src="assets/images/recipe-pizza-hero.webp"
+            src="assets/images/receptek-nagy-kep.png"
             alt="Mozzarellás pizza"
             class="receptek-circle-img"
           >
@@ -291,9 +313,7 @@
   ══════════════════════════════════════════════════════════════ -->
   <footer class="site-footer" id="kapcsolat">
     <div class="footer-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C360,80 720,0 1080,48 C1260,72 1380,24 1440,40 L1440,80 L0,80 Z" fill="#fcf7d8"/>
-      </svg>
+      <img src="assets/images/footer-hullam.png" alt="" aria-hidden="true">
     </div>
     <div class="footer-body">
       <div class="container">

@@ -242,31 +242,57 @@ ul { list-style: none; }
 
 /* ================================================================
    HERO — Főoldal
-   Design: dark green organic rounded container, large white heading,
-           product collage image on the right overlapping
+   Design: Hero_zold_hatter.png organic blob (left), Nav hullam.png
+           cream blob (right bg), product collage on top
    ================================================================ */
 .hero-section {
+  position: relative;
+  overflow: visible;
+  padding: 32px 0 48px;
   background: var(--white);
-  padding: 40px 0 56px;
-  overflow: hidden;
+}
+
+/* Cream background blob — right side behind product image */
+.hero-nav-hullam {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 55%;
+  max-width: 780px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero-section .container {
   position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr 480px;
   align-items: center;
   gap: 0;
+  min-height: 560px;
+}
+
+/* Green organic blob — positioned absolute behind the text */
+.hero-bg-shape {
+  position: absolute;
+  left: calc(var(--gap) * -1);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75%;
+  max-width: 1060px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero-content {
-  background: var(--green-dark);
-  border-radius: 0 280px 280px 0;
-  padding: 72px 120px 72px var(--gap);
   position: relative;
-  z-index: 1;
-  margin-left: calc(var(--gap) * -1);
-  padding-left: calc(var(--gap) + 40px);
+  z-index: 2;
+  padding: 72px 80px 72px 0;
 }
 
 .hero-title {
@@ -304,15 +330,14 @@ ul { list-style: none; }
 
 .hero-image {
   position: relative;
-  z-index: 2;
-  margin-left: -80px;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero-image img {
   width: 100%;
-  max-width: 580px;
+  max-width: 560px;
   filter: drop-shadow(0 24px 48px rgba(0,0,0,.22));
 }
 
@@ -468,12 +493,28 @@ ul { list-style: none; }
 .dot.active { background: var(--orange); }
 
 /* ================================================================
+   RECEPTEK HULLAM — wave divider between products and receptek
+   Design: Receptek hullam.png S-curve, cream colour
+   ================================================================ */
+.receptek-hullam {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  margin-bottom: -2px;
+}
+.receptek-hullam img {
+  width: 100%;
+  display: block;
+}
+
+/* ================================================================
    RECEPTEK SECTION — Főoldal
-   Design: off-white bg, left text / right circular image, then cards
+   Design: cream bg (continues from wave), left text / right pizza img
    ================================================================ */
 .receptek-section {
-  background: var(--off-white);
-  padding: 80px 0 0;
+  background: var(--cream);
+  padding: 60px 0 0;
   position: relative;
   overflow: hidden;
 }
@@ -512,15 +553,14 @@ ul { list-style: none; }
 }
 .receptek-circle-img {
   width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 24px 64px rgba(0,0,0,.18);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.18));
 }
 
 /* Recipe cards */
 .recipe-cards-section {
-  background: var(--off-white);
+  background: var(--cream);
   padding: 0 0 80px;
 }
 
@@ -594,8 +634,9 @@ ul { list-style: none; }
   overflow: hidden;
   line-height: 0;
   background: var(--white);
+  margin-bottom: -4px;
 }
-.footer-wave svg { display: block; width: 100%; }
+.footer-wave img { display: block; width: 100%; }
 
 .footer-body {
   background: var(--cream);
@@ -1062,17 +1103,21 @@ blockquote.about-quote::after  { content: close-quote; }
    ================================================================ */
 @media (max-width: 1200px) {
   :root { --gap: 36px; }
-  .hero-section .container { grid-template-columns: 1fr 400px; }
-  .hero-content { padding: 56px 80px 56px calc(var(--gap) + 20px); }
-  .hero-image img { max-width: 460px; }
-  .receptek-circle-img { width: 400px; height: 400px; }
+  .hero-section .container { grid-template-columns: 1fr 380px; }
+  .hero-content { padding: 56px 60px 56px 0; }
+  .hero-image img { max-width: 420px; }
+  .receptek-circle-img { width: 380px; }
+  .hero-nav-hullam { width: 52%; }
+  .hero-bg-shape { width: 78%; }
 }
 
 @media (max-width: 1024px) {
   :root { --gap: 28px; }
   .hero-section .container { grid-template-columns: 1fr; }
-  .hero-content { border-radius: 0 80px 80px 0; padding: 52px 40px; margin-left: 0; }
-  .hero-image { margin-left: 0; margin-top: 32px; justify-content: center; }
+  .hero-content { padding: 52px 40px; }
+  .hero-bg-shape { width: 100%; left: 0; transform: translateY(-46%); }
+  .hero-nav-hullam { width: 70%; top: -20px; right: -20px; }
+  .hero-image { margin-top: 32px; justify-content: center; }
   .hero-image img { max-width: 80%; }
   .receptek-inner { grid-template-columns: 1fr; }
   .receptek-circle-img { width: 360px; height: 360px; }
@@ -1117,7 +1162,9 @@ blockquote.about-quote::after  { content: close-quote; }
   .has-dropdown.open .dropdown-menu { display: block; }
 
   /* Hero */
-  .hero-content { border-radius: 16px; margin: 0 var(--gap); padding: 40px 28px; }
+  .hero-content { padding: 40px 28px; }
+  .hero-bg-shape { width: 110%; left: -5%; }
+  .hero-nav-hullam { display: none; }
   .hero-image { margin-top: 24px; }
   .hero-image img { max-width: 90%; }
 
